@@ -14,19 +14,23 @@
             Then use the index to print the players place in the collection.
           </p>
           <!-- add the v-for to player-card -->
-          <div class="player-card text-center">
-            <h5>{{}}</h5>
+          <div
+            class="player-card text-center"
+            v-for="(player, index) in state.players"
+            :key="player"
+          >
+            <h5>{{ index + 1 }}</h5>
             <div>
               <img class="img" src="" />
             </div>
             <div>
-              <span>{{}}</span>
+              <span>{{ index + 2 }}</span>
             </div>
             <div>
-              <span>{{}}</span>
+              <span>{{ index + 3 }}</span>
             </div>
             <div>
-              <span>{{}}</span>
+              <span>{{ index + 4 }}</span>
             </div>
           </div>
         </div>
@@ -39,7 +43,7 @@
             value contained at that key.
           </p>
           <div class="blog" v-for="(value, key) in state.blog" :key="key">
-            <p>{{}}: {{}}</p>
+            <p>{{ key }}: {{ value }}</p>
           </div>
         </div>
       </div>
