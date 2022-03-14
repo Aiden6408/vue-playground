@@ -56,7 +56,7 @@ export default {
       message: "Oh no,This is too awesome!",
       myname: "aiden",
       //change isActive to true
-      isActive: false,
+      isActive: true,
     });
     return { state };
   },
